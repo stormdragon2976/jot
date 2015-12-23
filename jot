@@ -32,7 +32,8 @@ EOF
 show_help()
 {
 cat << EOF
-${0##*/} released under the terms of the unlicense.
+${0##*/} brought to you by Storm Dragon
+released under the terms of the unlicense.
 ${0##*/} options:
 With no arguments, display all notes.
 -c or --clipboard: Place results in the clipboard as well as stdout. Requires xclip.
