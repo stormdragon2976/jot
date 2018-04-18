@@ -2,7 +2,7 @@
 
 show_license()
 {
-cat << EOF
+fold -s << EOF
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -31,7 +31,7 @@ EOF
 
 show_help()
 {
-cat << EOF
+fold -s << EOF
 ${0##*/} brought to you by Storm Dragon
 released under the terms of the unlicense.
 ${0##*/} options:
@@ -137,7 +137,7 @@ case "$1" in
                 exit 0
             fi
             if [ $1 -lt 10 ]; then
-                sed -i "/^0$1: /d" "$configPath/notes"
+                sed -i "/^0${1##*0}: /d" "$configPath/notes"
             else
                 sed -i "/^$1: /d" "$configPath/notes"
             fi
